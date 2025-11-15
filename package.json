@@ -1,0 +1,53 @@
+{
+  "name": "xai-code",
+  "version": "0.1.0",
+  "description": "xAI Code is a Grok-powered agentic coding assistant for the terminal, inspired by Codex CLI and Claude Code.",
+  "type": "module",
+  "bin": {
+    "xai-code": "./dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "lint": "tsc --noEmit",
+    "dev": "tsx src/index.ts"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "keywords": [
+    "xai",
+    "grok",
+    "cli",
+    "agent",
+    "codex",
+    "anthropic",
+    "claude",
+    "developer-tools"
+  ],
+  "author": "xAI",
+  "license": "MIT",
+  "dependencies": {
+    "@ai-sdk/xai": "^0.0.2",
+    "ai": "^3.2.35",
+    "chalk": "^5.4.1",
+    "commander": "^12.1.0",
+    "execa": "^9.3.0",
+    "ora": "^8.1.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
